@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Butterfly Handle Caps",
-    "image": "/src/assets/images/productItems/butterfly-handle-caps.png",
+    "image": "/images/productItems/butterfly-handle-caps.png",
     "description": "High-quality butterfly handle caps designed for easy grip and secure closure. Perfect for various container applications.",
     "availableTypes": "Tupperware",
     "availableDiameters": "38 mm, 46 mm",
@@ -13,7 +13,7 @@
   {
     "id": 2,
     "name": "Flip Top Caps",
-    "image": "/src/assets/images/productItems/flip-top-caps.png",
+    "image": "/images/productItems/flip-top-caps.png",
     "description": "Convenient flip-top caps for easy access and secure sealing. Ideal for bottles and containers requiring frequent opening.",
     "availableTypes": "Bottles, Containers",
     "availableDiameters": "28 mm, 32 mm",
@@ -24,7 +24,7 @@
   {
     "id": 3,
     "name": "Flower Caps",
-    "image": "/src/assets/images/productItems/flower-caps.png",
+    "image": "/images/productItems/flower-caps.png",
     "description": "Decorative flower-shaped caps that combine functionality with aesthetic appeal. Perfect for premium packaging.",
     "availableTypes": "Decorative, Premium",
     "availableDiameters": "30 mm, 35 mm",
@@ -35,7 +35,7 @@
   {
     "id": 4,
     "name": "Fridge Bottle Caps",
-    "image": "/src/assets/images/productItems/fridge-bottle-caps.png",
+    "image": "/images/productItems/fridge-bottle-caps.png",
     "description": "Specialized caps designed for refrigerator bottles with excellent sealing properties and temperature resistance.",
     "availableTypes": "Refrigerator bottles",
     "availableDiameters": "28 mm, 38 mm",
@@ -46,7 +46,7 @@
   {
     "id": 5,
     "name": "Ghee Jar Caps",
-    "image": "/src/assets/images/productItems/ghee-jar-caps.png",
+    "image": "/images/productItems/ghee-jar-caps.png",
     "description": "Heavy-duty caps specifically designed for ghee jars with superior sealing to maintain freshness and quality.",
     "availableTypes": "Ghee containers",
     "availableDiameters": "45 mm, 55 mm",
@@ -57,7 +57,7 @@
   {
     "id": 6,
     "name": "Handle Caps",
-    "image": "/src/assets/images/productItems/handle-caps.png",
+    "image": "/images/productItems/handle-caps.png",
     "description": "Ergonomic handle caps providing comfortable grip and easy handling for various container types.",
     "availableTypes": "Handled containers",
     "availableDiameters": "32 mm, 42 mm",
@@ -68,7 +68,7 @@
   {
     "id": 7,
     "name": "Inner Plug",
-    "image": "/src/assets/images/productItems/inner-plug.png",
+    "image": "/images/productItems/inner-plug.png",
     "description": "Precision-engineered inner plugs for enhanced sealing and product protection in various container applications.",
     "availableTypes": "Sealing plugs",
     "availableDiameters": "20 mm, 25 mm",
@@ -79,7 +79,7 @@
   {
     "id": 8,
     "name": "Jug Handle Caps / Jumbo Caps",
-    "image": "/src/assets/images/productItems/jug-handle-caps.png",
+    "image": "/images/productItems/jug-handle-caps.png",
     "description": "Large-sized caps with integrated handles designed for jugs and jumbo containers requiring easy handling.",
     "availableTypes": "Jug caps, Jumbo containers",
     "availableDiameters": "50 mm, 65 mm",
@@ -90,7 +90,7 @@
   {
     "id": 9,
     "name": "Peanut Butter Jar Caps",
-    "image": "/src/assets/images/productItems/peanutbutter-jar-caps.png",
+    "image": "/images/productItems/peanutbutter-jar-caps.png",
     "description": "Specialized caps for peanut butter jars with excellent sealing properties to maintain product freshness.",
     "availableTypes": "Food jars",
     "availableDiameters": "70 mm, 82 mm",
@@ -101,7 +101,7 @@
   {
     "id": 10,
     "name": "Seal Caps",
-    "image": "/src/assets/images/productItems/seal-caps.png",
+    "image": "/images/productItems/seal-caps.png",
     "description": "High-performance seal caps providing maximum protection and tamper evidence for sensitive products.",
     "availableTypes": "Security seals",
     "availableDiameters": "28 mm, 35 mm",
@@ -112,7 +112,7 @@
   {
     "id": 11,
     "name": "Simple Caps",
-    "image": "/src/assets/images/productItems/simple-caps.png",
+    "image": "/images/productItems/simple-caps.png",
     "description": "Versatile simple caps suitable for a wide range of applications with reliable sealing and cost-effective design.",
     "availableTypes": "General purpose",
     "availableDiameters": "24 mm, 28 mm, 32 mm",
@@ -123,7 +123,7 @@
   {
     "id": 12,
     "name": "Spice Caps",
-    "image": "/src/assets/images/productItems/spice-caps.png",
+    "image": "/images/productItems/spice-caps.png",
     "description": "Specially designed caps for spice containers with features to maintain aroma and prevent moisture ingress.",
     "availableTypes": "Spice containers",
     "availableDiameters": "35 mm, 45 mm",
