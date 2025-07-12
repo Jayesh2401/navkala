@@ -53,7 +53,7 @@
 .nav-item {
   background: none;
   border: none;
-  color: #64748b;
+  color: #333;
   font-size: 1rem;
   font-weight: 500;
   padding: 0.5rem 1rem;
@@ -61,16 +61,18 @@
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .nav-item:hover {
   color: #2563eb;
-  background: rgba(37, 99, 235, 0.05);
+  outline: none;
 }
 
 .nav-item.active {
   color: #2563eb;
-  background: rgba(37, 99, 235, 0.1);
+  outline: none;
 }
 
 /* Mobile Menu Button */
@@ -142,7 +144,7 @@
   width: 100%;
   background: none;
   border: none;
-  color: #64748b;
+  color: #333;
   font-size: 1.1rem;
   font-weight: 500;
   padding: 1rem;
@@ -150,6 +152,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   margin-bottom: 0.5rem;
+  text-decoration: none;
 }
 
 .mobile-nav-item:hover {
@@ -176,51 +179,57 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .header-content {
+    padding: 0 0.2rem;
+    max-width: calc(100vw - 50px);
+  }
+
   .desktop-nav {
     display: none;
   }
-  
+
   .mobile-menu-btn {
     display: block;
   }
-  
+
   .mobile-nav {
     display: block;
   }
-  
+
   .logo-text h1 {
     font-size: 1.2rem;
   }
-  
+
   .logo-text span {
     font-size: 0.7rem;
   }
-  
+
   .logo-img {
-    width: 40px;
+    width: 140px;
     height: 40px;
   }
 }
 
 @media (max-width: 480px) {
   .header-content {
-    padding: 0 0.5rem;
+    padding: 0 0.2rem;
+    max-width: calc(100vw - 30px);
   }
-  
+
   .logo {
     gap: 0.5rem;
   }
-  
+
   .logo-text h1 {
     font-size: 1rem;
   }
-  
+
   .logo-text span {
     font-size: 0.6rem;
   }
-  
+
   .logo-img {
-    width: 35px;
+    width: 125px;
     height: 35px;
   }
 }

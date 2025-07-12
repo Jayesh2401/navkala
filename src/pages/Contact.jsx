@@ -30,7 +30,7 @@ const Contact = () => {
       <div className="contact-header">
         <h1 className="contact-title">Contact Us</h1>
         <p className="contact-subtitle">
-          Please provide your details along with your queries so we can get back to you with solutions
+          Please provide your details along with your queries so we can get back to you with solutions.
         </p>
       </div>
 
@@ -95,33 +95,7 @@ const Contact = () => {
           </form>
         </div>
 
-        <div className="contact-info-section">
-          <div className="contact-info">
-            <h2>Contact</h2>
-            <div className="info-item">
-              <strong>Phone:</strong> +91-9825326475
-            </div>
-            <div className="info-item">
-              <strong>Email:</strong> navkalaplasticindustries@gmail.com
-            </div>
-          </div>
-
-          <div className="location-info">
-            <h2>Location</h2>
-            <div className="address">
-              <p>17/A, Mahalaxmi Industrial Estate,</p>
-              <p>Near Bombay Conductor,</p>
-              <p>Vatva, Ahmedabad - 382445,</p>
-              <p>Gujarat, India</p>
-            </div>
-          </div>
-
-          <div className="map-placeholder">
-            <div className="map-container">
-              <span>Google Maps Location</span>
-            </div>
-          </div>
-        </div>
+       
       </div>
     </div>
   )

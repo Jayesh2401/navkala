@@ -1,23 +1,28 @@
 import { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import './Header.css'
 import logo from '../assets/images/logo.png'
 
-const Header = ({ currentPage, setCurrentPage }) => {
+const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const location = useLocation()
 
   const menuItems = [
-    { id: 'home', label: 'Home', icon: '🏠' },
-    { id: 'products', label: 'Products', icon: '📦' },
-    { id: 'contact', label: 'Contact', icon: '📞' }
+    { id: 'home', label: 'Home', icon: '🏠', path: '/' },
+    { id: 'products', label: 'Products', icon: '📦', path: '/products' },
+    { id: 'contact', label: 'Contact', icon: '📞', path: '/contact' }
   ]
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
 
-  const handleNavClick = (pageId) => {
-    setCurrentPage(pageId)
+  const handleNavClick = () => {
     setIsMobileMenuOpen(false)
+  }
+
+  const isActive = (path) => {
+    return location.pathname === path
   }
 
   return (
@@ -34,13 +39,14 @@ const Header = ({ currentPage, setCurrentPage }) => {
         {/* Desktop Navigation */}
         <nav className="desktop-nav">
           {menuItems.map(item => (
-            <button
+            <Link
               key={item.id}
-              className={`nav-item ${currentPage === item.id ? 'active' : ''}`}
-              onClick={() => handleNavClick(item.id)}
+              to={item.path}
+              className={`nav-item ${isActive(item.path) ? 'active' : ''}`}
+              onClick={handleNavClick}
             >
               {item.label}
-            </button>
+            </Link>
           ))}
         </nav>
 
@@ -56,14 +62,15 @@ const Header = ({ currentPage, setCurrentPage }) => {
         {/* Mobile Navigation */}
         <nav className={`mobile-nav ${isMobileMenuOpen ? 'open' : ''}`}>
           {menuItems.map(item => (
-            <button
+            <Link
               key={item.id}
-              className={`mobile-nav-item ${currentPage === item.id ? 'active' : ''}`}
-              onClick={() => handleNavClick(item.id)}
+              to={item.path}
+              className={`mobile-nav-item ${isActive(item.path) ? 'active' : ''}`}
+              onClick={handleNavClick}
             >
               <span className="nav-icon">{item.icon}</span>
               <span className="nav-label">{item.label}</span>
-            </button>
+            </Link>
           ))}
         </nav>
       </div>
