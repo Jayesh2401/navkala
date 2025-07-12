@@ -108,6 +108,39 @@
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
+/* Dual button layout */
+.submit-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  grid-column: 1 / -1;
+}
+
+.whatsapp-btn {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+}
+
+.whatsapp-btn:hover {
+  background: linear-gradient(135deg, #128C7E 0%, #075E54 100%);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.email-btn {
+  background: linear-gradient(135deg, #EA4335 0%, #D33B2C 100%);
+}
+
+.email-btn:hover {
+  background: linear-gradient(135deg, #D33B2C 0%, #B52D20 100%);
+  box-shadow: 0 4px 12px rgba(234, 67, 53, 0.3);
+}
+
+@media (max-width: 480px) {
+  .submit-buttons {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+
 .contact-info-section {
   display: flex;
   flex-direction: column;

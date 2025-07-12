@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './Contact.css'
 
-const Contact = () => {
+const ContactWithEmail = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -17,12 +17,43 @@ const Contact = () => {
     }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmitEmail = (e) => {
     e.preventDefault()
+    
+    // Create email content
+    const subject = `New Inquiry from ${formData.name} - Navkala Plastic Industries`
+    const body = `Dear Navkala Team,
 
+I am interested in your products and services. Please find my details below:
+
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+
+Message:
+${formData.message}
+
+Best regards,
+${formData.name}`
+
+    // Create mailto URL
+    const mailtoURL = `mailto:navkalaplasticcaps@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    
+    // Open email client
+    window.location.href = mailtoURL
+    
+    // Reset form
+    setFormData({ name: '', email: '', phone: '', message: '' })
+    
+    alert('Thank you for your inquiry! Your email client will open to send the message.')
+  }
+
+  const handleSubmitWhatsApp = (e) => {
+    e.preventDefault()
+    
     // Create WhatsApp message
     const whatsappMessage = `*New Inquiry from Website*
-
+    
 *Name:* ${formData.name}
 *Email:* ${formData.email}
 *Phone:* ${formData.phone}
@@ -30,18 +61,18 @@ const Contact = () => {
 
 Thank you for contacting Navkala Plastic Industries!`
 
-    // Your WhatsApp number (replace with your actual number)
-    const whatsappNumber = "919925325875" // Remove + and spaces
-
+    // Your WhatsApp number
+    const whatsappNumber = "919925325875"
+    
     // Create WhatsApp URL
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
-
+    
     // Open WhatsApp
     window.open(whatsappURL, '_blank')
-
+    
     // Reset form
     setFormData({ name: '', email: '', phone: '', message: '' })
-
+    
     alert('Thank you for your inquiry! You will be redirected to WhatsApp to send your message.')
   }
 
@@ -56,7 +87,7 @@ Thank you for contacting Navkala Plastic Industries!`
 
       <div className="contact-content">
         <div className="contact-form-section">
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <form className="contact-form">
             <div className="form-group">
               <label htmlFor="name">Name</label>
               <input
@@ -109,16 +140,19 @@ Thank you for contacting Navkala Plastic Industries!`
               ></textarea>
             </div>
 
-            <button type="submit" className="submit-btn">
-              Send Inquiry
-            </button>
+            <div className="submit-buttons">
+              <button type="button" className="submit-btn whatsapp-btn" onClick={handleSubmitWhatsApp}>
+                Send via WhatsApp
+              </button>
+              <button type="button" className="submit-btn email-btn" onClick={handleSubmitEmail}>
+                Send via Email
+              </button>
+            </div>
           </form>
         </div>
-
-       
       </div>
     </div>
   )
 }
 
-export default Contact
+export default ContactWithEmail
