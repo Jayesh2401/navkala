@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import "./Home.css";
 import landingPage from "../assets/images/landingPage.png";
 import mainProduct from "../assets/images/mainProduct.png";
@@ -75,7 +75,7 @@ const Home = () => {
                 </div>
               </div>
 
-               <div className="category-row">
+              <div className="category-row">
                 <div className="category-item">
                   <span className="bullet">•</span>
                   <span>FMCG Segment</span>
@@ -90,11 +90,18 @@ const Home = () => {
             <p className="products-description">
               Having a large number of injection molding machines of reputed
               brands, we can fulfil bulk orders promptly. You can check out
-              various products on the <Link to="/products" style={{
-                fontWeight: "bold",
-                color: "#2563eb",
-                textDecoration: "none"
-              }}>Products</Link> page.
+              various products on the{" "}
+              <Link
+                to="/products"
+                style={{
+                  fontWeight: "bold",
+                  color: "#2563eb",
+                  textDecoration: "none",
+                }}
+              >
+                Products
+              </Link>{" "}
+              page.
             </p>
           </div>
         </div>
@@ -106,17 +113,17 @@ const Home = () => {
           <div className="about-text">
             <h2>About Navkala</h2>
             <p>
-              Navkala Plastics was established in 1970 by Mr. Sandeep Kumar
-              Khatana. The name Navkala originates from the Sanskrit word
-              meaning "new art" and mother Khatana. Founded on the principle of
-              innovation and excellence.
+              Navkala Plastics was established in 1990 by Mr. Sandipkumar
+              Kalathia. The name NAvkala originates from the founder’s beloved
+              parents, father Navnitrai and mother Kalavati ben. It had been
+              Sandip bhai’s dream to start a company honouring his parents.
             </p>
             <p>
-              The first factory started with just 4 injection molding machines,
-              established in Ahmedabad. Over the past 35 years, Navkala has been
-              blessed with the goodwill from family, friends, and clients. It
-              has since grown in scale and size, expanding to manufacturing
-              plants in Gujarat and Maharashtra.
+              The first factory started with a single injection molding machine
+              in a rental space. Over the past 35 years, Navakala plastics has
+              been blessed with the goodwill from family, friends, and clients.
+              It has since grown in stature and size, expanding to multiple
+              units in Vatva Ahmedabad.
             </p>
           </div>
           <div className="about-image">

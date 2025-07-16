@@ -9,8 +9,8 @@ const Header = () => {
 
   const menuItems = [
     { id: 'home', label: 'Home', icon: '🏠', path: '/' },
-    { id: 'products', label: 'Products', icon: '📦', path: '/products' },
-    { id: 'contact', label: 'Contact', icon: '📞', path: '/contact' }
+    { id: 'products', label: 'Products', icon: '', path: '/products' },
+    { id: 'contact', label: 'Contact', icon: '', path: '/contact' }
   ]
 
   const toggleMobileMenu = () => {
