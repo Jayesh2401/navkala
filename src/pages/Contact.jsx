@@ -57,7 +57,7 @@ Thank you for contacting Navkala Plastic Industries!`
       <div className="contact-content">
         <div className="contact-form-section">
           <form className="contact-form" onSubmit={handleSubmit}>
-            <div className="form-group">
+            <div className="form-groups">
               <label htmlFor="name">Name</label>
               <input
                 type="text"
@@ -70,7 +70,7 @@ Thank you for contacting Navkala Plastic Industries!`
               />
             </div>
 
-            <div className="form-group">
+            <div className="form-groups">
               <label htmlFor="email">Email</label>
               <input
                 type="email"
@@ -83,7 +83,7 @@ Thank you for contacting Navkala Plastic Industries!`
               />
             </div>
 
-            <div className="form-group">
+            <div className="form-groups">
               <label htmlFor="phone">Phone</label>
               <input
                 type="tel"
@@ -96,7 +96,7 @@ Thank you for contacting Navkala Plastic Industries!`
               />
             </div>
 
-            <div className="form-group">
+            <div className="form-groups">
               <label htmlFor="message">Message</label>
               <textarea
                 id="message"
