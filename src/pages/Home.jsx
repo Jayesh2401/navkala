@@ -114,7 +114,7 @@ const Home = () => {
             <h2>About Navkala</h2>
             <p>
               Navkala Plastics was established in 1990 by Mr. Sandipkumar
-              Kalathia. The name NAvkala originates from the founder’s beloved
+              Kalathia. The name Navkala originates from the founder’s beloved
               parents, father Navnitrai and mother Kalavati ben. It had been
               Sandip bhai’s dream to start a company honouring his parents.
             </p>

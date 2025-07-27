@@ -29,7 +29,7 @@ const Footer = () => {
           <div className="map-container">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.5234567890123!2d72.8776559!3d23.0225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDAxJzIxLjAiTiA3MsKwNTInMzkuNiJF!5e0!3m2!1sen!2sin!4v1234567890123"
-              width="200"
+              width="400"
               height="200"
               style={{ border: 0, borderRadius: "8px" }}
               allowFullScreen=""

@@ -8,7 +8,7 @@ const Header = () => {
   const location = useLocation()
 
   const menuItems = [
-    { id: 'home', label: 'Home', icon: '🏠', path: '/' },
+    { id: 'home', label: 'Home', icon: '', path: '/' },
     { id: 'products', label: 'Products', icon: '', path: '/products' },
     { id: 'contact', label: 'Contact', icon: '', path: '/contact' }
   ]

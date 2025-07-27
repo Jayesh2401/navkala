@@ -108,12 +108,11 @@
 .about-navkala {
   background: white;
   border-radius: 12px;
-  padding: 3rem;
 }
 
 .about-content {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 2fr;
   gap: 3rem;
   align-items: start;
 }
