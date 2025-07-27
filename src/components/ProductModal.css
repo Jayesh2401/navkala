@@ -29,7 +29,7 @@
   right: 2rem;
   background: #f1f5f9;
   border: none;
-  border-radius:30%;
+  border-radius: 30%;
   width: 42px;
   height: 41px;
   display: flex;
@@ -117,14 +117,14 @@
   font-weight: 500;
   color: #374151;
   font-size: 0.9rem;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   flex: 1;
 }
 
 .description-value {
   color: #1e293b;
   font-size: 0.9rem;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   text-align: right;
   flex: 1;
   text-align: left;
@@ -149,11 +149,11 @@
   .modal-backdrop {
     padding: 0.5rem;
   }
-  
+
   .modal-content {
     max-height: 95vh;
   }
-  
+
   .modal-body {
     gap: 1rem;
     padding: 1.5rem;
@@ -170,7 +170,7 @@
   }
 
   .description-row {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     gap: 0.25rem;
     padding: 0.5rem 0;
@@ -191,27 +191,27 @@
   .modal-backdrop {
     padding: 0.25rem;
   }
-  
+
   .modal-body {
     padding: 1rem;
     gap: 1rem;
   }
-  
+
   .modal-title {
     font-size: 1.3rem;
   }
-  
+
   .modal-close {
     width: 35px;
     height: 35px;
     font-size: 1.3rem;
   }
-  
+
   .modal-image {
     min-height: 150px;
     padding: 1rem;
   }
-  
+
   .modal-specifications {
     padding: 0.75rem;
   }
