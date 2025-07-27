@@ -4,33 +4,33 @@
     "name": "Butterfly Handle Caps",
     "image": "/images/productItems/butterfly-handle-caps.png",
     "description": "High-quality butterfly handle caps designed for easy grip and secure closure. Perfect for various container applications.",
-    "availableTypes": "Tupperware",
-    "availableDiameters": "38 mm, 46 mm",
-    "flipTop": "24 mm, 60 mm",
-    "applications": ["Tupperware containers", "Food storage", "Kitchen accessories"],
-    "features": ["Easy grip design", "Secure closure", "Durable material", "Multiple sizes available"]
+    "customFields": [
+      {"label": "Available Types", "value": "Tupperware"},
+      {"label": "Available Diameters", "value": "38 mm, 46 mm"},
+      {"label": "Flip Top", "value": "24 mm, 60 mm"}
+    ]
   },
   {
     "id": 2,
     "name": "Flip Top Caps",
     "image": "/images/productItems/flip-top-caps.png",
     "description": "Convenient flip-top caps for easy access and secure sealing. Ideal for bottles and containers requiring frequent opening.",
-    "availableTypes": "Bottles, Containers",
-    "availableDiameters": "28 mm, 32 mm",
-    "flipTop": "20 mm, 24 mm",
-    "applications": ["Beverage bottles", "Cosmetic containers", "Pharmaceutical bottles"],
-    "features": ["One-handed operation", "Leak-proof seal", "Smooth flip mechanism", "Tamper-evident design"]
+    "customFields": [
+      {"label": "Available Types", "value": "Bottles, Containers"},
+      {"label": "Available Diameters", "value": "28 mm, 32 mm"},
+      {"label": "Flip Top", "value": "20 mm, 24 mm"}
+    ]
   },
   {
     "id": 3,
     "name": "Flower Caps",
     "image": "/images/productItems/flower-caps.png",
     "description": "Decorative flower-shaped caps that combine functionality with aesthetic appeal. Perfect for premium packaging.",
-    "availableTypes": "Decorative, Premium",
-    "availableDiameters": "30 mm, 35 mm",
-    "flipTop": "25 mm, 30 mm",
-    "applications": ["Cosmetic jars", "Premium containers", "Gift packaging"],
-    "features": ["Attractive flower design", "Premium finish", "Secure fit", "Eye-catching appearance"]
+    "customFields": [
+      {"label": "Available Types", "value": "Decorative, Premium"},
+      {"label": "Available Diameters", "value": "30 mm, 35 mm"},
+      {"label": "Flip Top", "value": "25 mm, 30 mm"}
+    ]
   },
   {
     "id": 4,

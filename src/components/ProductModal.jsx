@@ -40,21 +40,22 @@ const ProductModal = ({ product, onClose }) => {
           <div className="modal-details">
             <div className="modal-section">
               <h3>Description</h3>
-              <div className="specifications-table">
-                <div className="spec-row">
-                  <span className="spec-label">Available Types</span>
-                  <span className="spec-value">{product.availableTypes}</span>
-                </div>
-                <div className="spec-row">
-                  <span className="spec-label">Available Diameters</span>
-                  <span className="spec-value">
-                    {product.availableDiameters}
-                  </span>
-                </div>
-                <div className="spec-row">
-                  <span className="spec-label">Flip Top</span>
-                  <span className="spec-value">{product.flipTop}</span>
-                </div>
+              <div className="description-table">
+                {/* Show only custom fields - all labels are dynamic */}
+                {product.customFields && product.customFields.length > 0 ? (
+                  product.customFields.map((field, index) => (
+                    field.label && field.value && (
+                      <div key={index} className="description-row">
+                        <span className="description-label">{field.label}</span>
+                        <span className="description-value">{field.value}</span>
+                      </div>
+                    )
+                  ))
+                ) : (
+                  <div className="no-description">
+                    <p>No product details available.</p>
+                  </div>
+                )}
               </div>
             </div>
           </div>

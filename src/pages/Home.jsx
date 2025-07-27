@@ -60,7 +60,7 @@ const Home = () => {
                 </div>
                 <div className="category-item">
                   <span className="bullet">•</span>
-                  <span>Peanut Jars</span>
+                  <span>Peanut Industries</span>
                 </div>
               </div>
 

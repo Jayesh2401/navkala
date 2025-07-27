@@ -1,6 +1,6 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { validateImageFile } from '../services/imageService';
-import { uploadImageFree } from '../services/freeImageHosting';
 import './ProductForm.css';
 
 const ProductForm = ({ product, onSubmit, onCancel }) => {
@@ -8,15 +8,10 @@ const ProductForm = ({ product, onSubmit, onCancel }) => {
     name: '',
     image: '',
     description: '',
-    availableTypes: '',
-    availableDiameters: '',
-    flipTop: '',
-    applications: [],
-    features: []
+    customFields: [] // Array of {label: string, value: string} objects
   });
 
-  const [applicationsText, setApplicationsText] = useState('');
-  const [featuresText, setFeaturesText] = useState('');
+
   const [imageFile, setImageFile] = useState(null);
   const [imagePreview, setImagePreview] = useState('');
   const [uploading, setUploading] = useState(false);
@@ -28,15 +23,9 @@ const ProductForm = ({ product, onSubmit, onCancel }) => {
         name: product.name || '',
         image: product.image || '',
         description: product.description || '',
-        availableTypes: product.availableTypes || '',
-        availableDiameters: product.availableDiameters || '',
-        flipTop: product.flipTop || '',
-        applications: product.applications || [],
-        features: product.features || []
+        customFields: product.customFields || []
       });
-      
-      setApplicationsText(product.applications?.join(', ') || '');
-      setFeaturesText(product.features?.join(', ') || '');
+
       setImagePreview(product.image || '');
     }
   }, [product]);
@@ -49,21 +38,28 @@ const ProductForm = ({ product, onSubmit, onCancel }) => {
     }));
   };
 
-  const handleApplicationsChange = (e) => {
-    const value = e.target.value;
-    setApplicationsText(value);
+
+
+  const handleCustomFieldChange = (index, field, value) => {
     setFormData(prev => ({
       ...prev,
-      applications: value.split(',').map(item => item.trim()).filter(item => item)
+      customFields: prev.customFields.map((item, i) =>
+        i === index ? { ...item, [field]: value } : item
+      )
     }));
   };
 
-  const handleFeaturesChange = (e) => {
-    const value = e.target.value;
-    setFeaturesText(value);
+  const addCustomField = () => {
     setFormData(prev => ({
       ...prev,
-      features: value.split(',').map(item => item.trim()).filter(item => item)
+      customFields: [...prev.customFields, { label: '', value: '' }]
+    }));
+  };
+
+  const removeCustomField = (index) => {
+    setFormData(prev => ({
+      ...prev,
+      customFields: prev.customFields.filter((_, i) => i !== index)
     }));
   };
 
@@ -209,7 +205,7 @@ const ProductForm = ({ product, onSubmit, onCancel }) => {
             />
           </div>
 
-          <div className="form-row">
+          {/* <div className="form-row">
             <div className="form-group">
               <label htmlFor="availableTypes">Available Types</label>
               <input
@@ -245,28 +241,60 @@ const ProductForm = ({ product, onSubmit, onCancel }) => {
               onChange={handleInputChange}
               placeholder="e.g., 24 mm, 60 mm"
             />
-          </div>
+          </div> */}
+
+
 
           <div className="form-group">
-            <label htmlFor="applications">Applications (comma-separated)</label>
-            <textarea
-              id="applications"
-              value={applicationsText}
-              onChange={handleApplicationsChange}
-              rows="3"
-              placeholder="e.g., Tupperware containers, Food storage, Kitchen accessories"
-            />
-          </div>
+            <div className="custom-fields-header">
+              <label>Product Specifications</label>
+              <button
+                type="button"
+                onClick={addCustomField}
+                className="add-field-button"
+              >
+                + Add Specification
+              </button>
+            </div>
+            <p className="custom-fields-help">
+              Create custom labels and values for your product. Examples: "Available Types" → "Tupperware", "Material" → "Food Grade Plastic", "Color Options" → "Blue, Red, Green"
+            </p>
 
-          <div className="form-group">
-            <label htmlFor="features">Features (comma-separated)</label>
-            <textarea
-              id="features"
-              value={featuresText}
-              onChange={handleFeaturesChange}
-              rows="3"
-              placeholder="e.g., Easy grip design, Secure closure, Durable material"
-            />
+            {formData.customFields.length === 0 ? (
+              <div className="no-custom-fields">
+                <p>No specifications added. Click "Add Specification" to create custom product details with your own labels and values.</p>
+              </div>
+            ) : (
+              <div className="custom-fields-list">
+                {formData.customFields.map((field, index) => (
+                  <div key={index} className="custom-field-row">
+                    <div className="custom-field-inputs">
+                      <input
+                        type="text"
+                        placeholder="Label (e.g., Available Types, Material, Color Options)"
+                        value={field.label}
+                        onChange={(e) => handleCustomFieldChange(index, 'label', e.target.value)}
+                        className="field-label-input"
+                      />
+                      <input
+                        type="text"
+                        placeholder="Value (e.g., Tupperware, Food Grade Plastic, Blue/Red/Green)"
+                        value={field.value}
+                        onChange={(e) => handleCustomFieldChange(index, 'value', e.target.value)}
+                        className="field-value-input"
+                      />
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => removeCustomField(index)}
+                      className="remove-field-button"
+                    >
+                      ×
+                    </button>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
 
           <div className="form-actions">

@@ -165,9 +165,6 @@
     padding-left: 10px;
   }
 
-  .about-navkala {
-    padding: 2rem;
-  }
 }
 
 @media (max-width: 768px) {
@@ -182,10 +179,6 @@
 
   .section-title {
     font-size: 1.6rem;
-  }
-
-  .about-navkala {
-    padding: 1.5rem;
   }
 
   .about-text h2 {
@@ -218,10 +211,6 @@
 
   .section-title {
     font-size: 1.4rem;
-  }
-
-  .about-navkala {
-    padding: 1rem;
   }
 
   .about-text h2 {

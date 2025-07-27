@@ -97,33 +97,49 @@
   margin: 0;
 }
 
-.specifications-table {
-  border-radius: 8px;
-  overflow: hidden;
-  margin-top: 1rem;
+.description-table {
+  margin-top: 0.5rem;
 }
 
-.spec-row {
+.description-row {
   display: flex;
-  gap: 40px;
+  justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 0rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f1f5f9;
 }
 
-.spec-row:last-child {
+.description-row:last-child {
   border-bottom: none;
 }
 
-.spec-label {
+.description-label {
   font-weight: 500;
   color: #374151;
   font-size: 0.9rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  flex: 1;
 }
 
-.spec-value {
-  color: #333;
+.description-value {
+  color: #1e293b;
   font-size: 0.9rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   text-align: right;
+  flex: 1;
+  text-align: left;
+}
+
+.no-description {
+  text-align: center;
+  padding: 2rem;
+  color: #6b7280;
+}
+
+.no-description p {
+  margin: 0;
+  font-style: italic;
+  font-size: 0.9rem;
 }
 
 /* Removed unused styles for simplified modal */
@@ -153,17 +169,21 @@
     padding: 1.5rem;
   }
 
-  .specifications-table {
-    margin-top: 0.5rem;
+  .description-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+    padding: 0.5rem 0;
   }
 
-  .spec-row {
-    padding: 0.5rem 0.75rem;
-  }
-
-  .spec-label,
-  .spec-value {
+  .description-label,
+  .description-value {
     font-size: 0.85rem;
+    text-align: left;
+  }
+
+  .description-value {
+    color: #6b7280;
   }
 }
 
