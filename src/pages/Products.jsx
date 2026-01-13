@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import './Products.css'
 import { getAllProducts } from '../services/productService'
 import ProductModal from '../components/ProductModal'
+import productsData from '../data/products.json'
 
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState(null)
@@ -14,11 +15,16 @@ const Products = () => {
     fetchProducts()
   }, [])
 
+  // useEffect(() => {
+  //   setProducts(productsData)
+  // }, [])
+
   const fetchProducts = async () => {
     try {
       setLoading(true)
-      const fetchedProducts = await getAllProducts()
-      setProducts(fetchedProducts)
+      // const fetchedProducts = await getAllProducts()
+      // setProducts(fetchedProducts)
+      setProducts(productsData)
     } catch (error) {
       setError('Failed to load products')
       console.error('Error fetching products:', error)
